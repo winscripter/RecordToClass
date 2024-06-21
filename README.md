@@ -1,5 +1,5 @@
 # RecordToClass
-Simple Roslyn-based utility to convert C# record types to classes.
+Simple Roslyn utility to convert C# record types to classes.
 
 # Purpose
 I had one of the projects where I wanted to convert record types to class types, but didn't want to do that manually and Visual Studio's Quick Actions do not offer any way to convert records to classes. So, I spent about 2 hours working on a small utility to automate this process, and there, `RecordToClass` was born.
