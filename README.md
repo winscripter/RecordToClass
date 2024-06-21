@@ -280,3 +280,10 @@ The output follows the .NET guidelines by suppressing the IDE0003 warning and ma
 need any refactoring. However, the result does use the K&amp;R curly bracket style, because I like it. But if you configured
 Visual Studio for the Allman curly bracket style (which is the default), and paste the generated code, Visual Studio will automatically
 convert the K&amp;R curly brace style to Allman for you.
+
+During conversion, no information is lost apart from custom members/attributes, default values, and inherited types. If you have a simple record like this:
+```cs
+public record Foo(int Bar);
+```
+then no information will be lost, you can still access methods like `GetHashCode()`, `ToString()`, `Deconstruct()`, etc. After all,
+this is not the most sophisticated thing in the world.
